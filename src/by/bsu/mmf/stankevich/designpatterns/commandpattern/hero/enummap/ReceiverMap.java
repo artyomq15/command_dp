@@ -6,6 +6,8 @@ import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.receiver.Receive
 
 import java.util.EnumMap;
 import java.util.EnumSet;
+import java.util.Optional;
+import java.util.Set;
 
 /**
  * Created by Lenovo on 06/28/2017.
@@ -21,11 +23,15 @@ public class ReceiverMap{
     public ReceiverTypes getKey(CommandTypes value){
         ReceiverTypes receiverEnum = null;
 
-        for (EnumMap.Entry<ReceiverTypes, EnumSet<CommandTypes>> entry : map.entrySet()) {
+        receiverEnum = map.entrySet().stream()
+                .filter(entry -> entry.getValue().contains(value))
+                .findFirst().get().getKey();
+
+        /*for (EnumMap.Entry<ReceiverTypes, EnumSet<CommandTypes>> entry : map.entrySet()) {
             if (entry.getValue().contains(value)){
                 receiverEnum = entry.getKey();
             }
-        }
+        }*/
 
         return receiverEnum;
     }
