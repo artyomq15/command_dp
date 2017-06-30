@@ -27,6 +27,9 @@ public class RunnerHero {
         AbstractCommand attackCommand = client.initCommand("ATTACK");
         Invoker attackInvoker = new Invoker(attackCommand);
 
+        AbstractCommand blockCommand = client.initCommand("Block");
+        Invoker blockInvoker = new Invoker(blockCommand);
+
 
         pickInvoker.invokeCommand(qqq);
         pickInvoker.invokeCommand(www);
@@ -37,6 +40,7 @@ public class RunnerHero {
         undoPickInvoker.invokeCommand(www);
 
         attackInvoker.invokeCommand(www);
+        blockInvoker.invokeCommand(qqq);
 
 
     }

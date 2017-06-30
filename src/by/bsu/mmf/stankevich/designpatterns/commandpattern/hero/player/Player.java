@@ -25,7 +25,7 @@ public class Player {
         return heroIsPicked;
     }
 
-    public void setHeroPickingState (boolean state) {
+    public void setHeroPickingState(boolean state) {
         this.heroIsPicked = state;
     }
 }

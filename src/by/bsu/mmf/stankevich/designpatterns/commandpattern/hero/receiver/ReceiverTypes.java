@@ -6,10 +6,12 @@ package by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.receiver;
 public enum ReceiverTypes {
     PICK(new PickReceiver()), FIGHT(new EnemyFightReceiver());
     Receiver receiver;
-    private ReceiverTypes(Receiver receiver){
+
+    ReceiverTypes(Receiver receiver) {
         this.receiver = receiver;
     }
-    public Receiver getReceiver(){
+
+    public Receiver getReceiver() {
         return receiver;
     }
 }

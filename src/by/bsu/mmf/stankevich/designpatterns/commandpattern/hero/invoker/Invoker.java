@@ -8,10 +8,12 @@ import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.player.Player;
  */
 public class Invoker {
     private AbstractCommand command;
-    public Invoker(AbstractCommand command){
+
+    public Invoker(AbstractCommand command) {
         this.command = command;
     }
-    public void invokeCommand(Player player){
+
+    public void invokeCommand(Player player) {
         command.execute(player);
     }
 }

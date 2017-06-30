@@ -4,28 +4,17 @@ import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.command.CommandT
 import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.player.Player;
 
 
-
 /**
  * Created by Lenovo on 06/28/2017.
  */
 public class FightReceiver extends IFightReceiver {
 
-    public void attack(Player player){
+    public void attack(Player player) {
         System.out.println("ATTACK!!");
     }
-    public void block(Player player){
-        System.out.println("BLOCK AN ATTACK");
-    }
-    public void action(CommandTypes cmd, Player player){
-        switch (cmd){
-            case ATTACK:
-                attack(player);
-                break;
-            case BLOCK:
-                block(player);
-                break;
-        }
 
+    public void block(Player player) {
+        System.out.println("BLOCK AN ATTACK");
     }
 
 }

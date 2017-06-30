@@ -1,6 +1,7 @@
 package by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.command;
 
 import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.player.Player;
+import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.receiver.IPickReceiver;
 import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.receiver.Receiver;
 
 /**
@@ -8,7 +9,7 @@ import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.receiver.Receive
  */
 public class RepickCommand extends AbstractCommand {
 
-    public void execute(Player player){
+    public void execute(Player player) {
         Receiver receiver = getReceiver();
         receiver.action(CommandTypes.REPICK_HERO, player); //"repickHero"
     }

@@ -8,11 +8,14 @@ import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.receiver.Receive
  */
 public abstract class AbstractCommand {
     private Receiver receiver;
-    public void setReceiver(Receiver receiver){
+
+    public void setReceiver(Receiver receiver) {
         this.receiver = receiver;
     }
-    public Receiver getReceiver(){
+
+    public Receiver getReceiver() {
         return receiver;
     }
+
     public abstract void execute(Player player);
 }
