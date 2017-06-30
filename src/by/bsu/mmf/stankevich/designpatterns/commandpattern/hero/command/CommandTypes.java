@@ -5,7 +5,7 @@ package by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.command;
  */
 public enum CommandTypes {
     PICK_HERO(new PickCommand()), REPICK_HERO(new RepickCommand()), UNDO_PICK(new UndoPickCommand()),
-    ATTACK(new AttackCommand());
+    ATTACK(new AttackCommand()), BLOCK (new BlockCommand());
     private AbstractCommand command;
     CommandTypes(AbstractCommand command){
         this.command = command;

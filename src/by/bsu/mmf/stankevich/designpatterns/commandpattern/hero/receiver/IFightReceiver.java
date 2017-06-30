@@ -7,4 +7,5 @@ import by.bsu.mmf.stankevich.designpatterns.commandpattern.hero.player.Player;
  */
 public abstract class IFightReceiver  implements Receiver {
     public abstract void attack(Player player);
+    public abstract void block(Player player);
 }

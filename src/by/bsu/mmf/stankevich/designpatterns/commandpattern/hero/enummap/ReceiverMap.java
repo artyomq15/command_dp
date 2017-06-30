@@ -16,7 +16,7 @@ public class ReceiverMap{
     private final EnumMap<ReceiverTypes,EnumSet<CommandTypes>> map = new EnumMap<ReceiverTypes, EnumSet<CommandTypes>>(ReceiverTypes.class);
     public ReceiverMap(){
         EnumSet<CommandTypes> pickSet = EnumSet.of(CommandTypes.PICK_HERO,CommandTypes.REPICK_HERO,CommandTypes.UNDO_PICK);
-        EnumSet<CommandTypes> fightSet = EnumSet.of(CommandTypes.ATTACK);
+        EnumSet<CommandTypes> fightSet = EnumSet.of(CommandTypes.ATTACK, CommandTypes.BLOCK);
         map.put(ReceiverTypes.PICK, pickSet);
         map.put(ReceiverTypes.FIGHT, fightSet);
     }
