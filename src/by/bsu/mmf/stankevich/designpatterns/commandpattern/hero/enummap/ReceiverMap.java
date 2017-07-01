@@ -28,6 +28,7 @@ public class ReceiverMap {
         receiverEnum = map.entrySet().stream()
                 .filter(entry -> entry.getValue().contains(value))
                 .findFirst().get().getKey();
+
         return receiverEnum;
     }
 
